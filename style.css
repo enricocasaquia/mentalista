@@ -17,21 +17,17 @@ body {
   .page-title {
     color: #ffffff;
     margin: 0 0 5px;
+    font-size: 5rem;
   }
   
   .page-subtitle {
     color: #ffffff;
     margin-top: 16px;
+    font-size: 2rem;
   }
   
   .page-logo {
     width: 200px;
-  }
-   
-  @media (max-height: 500px) {
-    body {
-      min-height: 800px;
-    }
   }
   
   input {
@@ -56,5 +52,38 @@ body {
     border: 3px #000000 solid;
     width: fit-content;
     font-size: 24px;
+    padding: 0.5rem;
+  }
+
+  .resultado2 {
+    color: #000000;
+    text-align: center;
+    margin-top: 16px;
+    background-color: #ffffff;
+    border: 3px #000000 solid;
+    width: fit-content;
+    font-size: 24px;
+    padding: 0.5rem;
   }
   
+  @media screen and (max-width: 900px) {
+    body {
+      min-height: 800px;
+    }
+
+    .page-title {
+      font-size: 3rem;
+    }
+
+    .page-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .resultado {
+      font-size: 1.3rem;
+    }
+
+    .resultado2 {
+      font-size: 1.3rem;
+    }
+  }
