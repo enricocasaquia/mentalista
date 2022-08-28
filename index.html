@@ -19,11 +19,13 @@
         <p class="page-subtitle">O computador sorteou um número inteiro de 0 a 10. <br/> Tente descobrir esse número!</p>
 
         <input type="number" id="valor" placeholder="Insira um número inteiro de 0 a 10"/><br/>
-        <button type="submit" onclick="Chutar()">Chutar</button>
+        <button type="submit" id="botao" onclick="Chutar1()">Chutar</button> </br>
+        <button id="btnJogarNovamente" onclick="window.location.reload(false)" disabled>Jogar Novamente</button>
         
         <br/><br/>
 
-        <span class="resultado" id="resultado"></span>
+        <span class="resultado" id="resultado" hidden></span> </br></br>
+        <span class="resultado2" id="resultado2" hidden></span>
 
     </div>
       
