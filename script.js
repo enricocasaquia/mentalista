@@ -39,15 +39,15 @@ function Chutar1() {
             document.getElementById("resultado2").hidden = false;
 
             //Exibe a mensagem na tela
-            respostaExibida.innerHTML = "<span style='color:#00FF00'>Você errou mas ainda tem mais 2 chances</span>";
-            respostaExibida2.innerHTML = "<span style='color:#00FF00'>O número é menor ou igual a 5</span>";
+            respostaExibida.innerHTML = "<span style='color:#008000'>Você errou mas ainda tem mais 2 chances</span>";
+            respostaExibida2.innerHTML = "<span style='color:#008000'>O número é menor ou igual a 5</span>";
         }
         else {
             document.getElementById("resultado").hidden = false;
             document.getElementById("resultado2").hidden = false;
             
-            respostaExibida.innerHTML = "<span style='color:#00FF00'>Você errou mas ainda tem mais 2 chances</span>";
-            respostaExibida2.innerHTML = "<span style='color:#00FF00'>O número é maior que 5</span>";
+            respostaExibida.innerHTML = "<span style='color:#008000'>Você errou mas ainda tem mais 2 chances</span>";
+            respostaExibida2.innerHTML = "<span style='color:#008000'>O número é maior que 5</span>";
         }
         //Chama a próxima função ao apertar o botão novamente
         document.getElementById("botao").onclick = Chutar2;
