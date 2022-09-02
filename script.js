@@ -1,5 +1,5 @@
 //Inicializando a variável como um valor aleatório de 0 a 10 (tido como o escolhido pela máquina)
-var númeroSecreto = parseInt(Math.random()*11);
+var numeroSecreto = parseInt(Math.random()*11);
 
 //Função que confirma o valor inserido e dá uma resposta ao usuário
 function Chutar1() {
@@ -12,7 +12,7 @@ function Chutar1() {
     var respostaExibida2 = document.getElementById("resultado2");
   
     //Condicional caso o valor inserido for equivalente ao número sorteado
-    if(chute == númeroSecreto) {
+    if(chute == numeroSecreto) {
         
         //Habilita a exibição da caixa de texto na tela
         document.getElementById("resultado").hidden = false;
@@ -34,7 +34,7 @@ function Chutar1() {
     }
     //Condicional caso nenhuma das condicionais acima sejam atendidas
     else {
-        if(númeroSecreto <= 5) {
+        if(numeroSecreto <= 5) {
             document.getElementById("resultado").hidden = false;
             document.getElementById("resultado2").hidden = false;
 
@@ -61,7 +61,7 @@ function Chutar2() {
     var respostaExibida = document.getElementById("resultado");
     var respostaExibida2 = document.getElementById("resultado2");
 
-    if(chute == númeroSecreto) {
+    if(chute == numeroSecreto) {
         document.getElementById("resultado2").hidden = true;
 
         respostaExibida.innerHTML = "Você acertou!";
@@ -79,19 +79,33 @@ function Chutar2() {
     }
 
     else {
-        if(númeroSecreto <= 5) {
+        if(numeroSecreto <= 2) {
             document.getElementById("resultado").hidden = false;
             document.getElementById("resultado2").hidden = false;
 
             respostaExibida.innerHTML = "<span style='color:#FF8C00'>Você errou mas ainda tem mais 1 chance</span>";
-            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é menor ou igual a 5</span>";
+            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é menor ou igual a 2</span>";
         }
-        else {
+        else if(numeroSecreto <= 5) {
             document.getElementById("resultado").hidden = false;
             document.getElementById("resultado2").hidden = false;
 
             respostaExibida.innerHTML = "<span style='color:#FF8C00'>Você errou mas ainda tem mais 1 chance</span>";
-            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é maior que 5</span>";
+            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é maior que 2 e menor que 6</span>";
+        }
+        else if(numeroSecreto <= 8) {
+            document.getElementById("resultado").hidden = false;
+            document.getElementById("resultado2").hidden = false;
+
+            respostaExibida.innerHTML = "<span style='color:#FF8C00'>Você errou mas ainda tem mais 1 chance</span>";
+            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é maior que 5 e menor que 9</span>";
+        }
+        else if(numeroSecreto >=9) {
+            document.getElementById("resultado").hidden = false;
+            document.getElementById("resultado2").hidden = false;
+
+            respostaExibida.innerHTML = "<span style='color:#FF8C00'>Você errou mas ainda tem mais 1 chance</span>";
+            respostaExibida2.innerHTML = "<span style='color:#FF8C00'>O número é maior maior ou igual a 9</span>";
         }
         document.getElementById("botao").onclick = Chutar3;
     }
@@ -104,7 +118,7 @@ function Chutar3() {
     var respostaExibida = document.getElementById("resultado");
     var respostaExibida2 = document.getElementById("resultado2");
 
-    if(chute == númeroSecreto) {
+    if(chute == numeroSecreto) {
         document.getElementById("resultado2").hidden = true;
 
         respostaExibida.innerHTML = "Você acertou!";
@@ -124,7 +138,7 @@ function Chutar3() {
     else {
         document.getElementById("resultado2").hidden = true;
 
-        respostaExibida.innerHTML = "<span style='color:#FF0000'>Você errou!! O número secreto era: </span>" + númeroSecreto;
+        respostaExibida.innerHTML = "<span style='color:#FF0000'>Você errou!! O número secreto era: </span>" + numeroSecreto;
 
         document.getElementById("botao").disabled = true;
         document.getElementById("btnJogarNovamente").disabled = false;
